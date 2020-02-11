@@ -10,5 +10,3 @@ to http://localhost:8081/user
 
 
 Remember the uid and devices.
-
-# Test
