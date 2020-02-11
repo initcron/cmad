@@ -19,12 +19,15 @@ pipeline {
          steps {
             echo 'running unit tests on users service'
             dir('java/cmad-ms-users'){
-              sh 'mvn clean test'              
+              sh 'mvn clean test'
             }
          }
       }
 
       stage('package') {
+         when {
+           branch 'master'
+         }
          steps {
             echo 'packaging users app'
             dir('java/cmad-ms-users'){
